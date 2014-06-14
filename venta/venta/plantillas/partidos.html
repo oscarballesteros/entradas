@@ -1,0 +1,9 @@
+{% extends 'index1.html' %}
+{% block cuerpo%}
+<span style="color: white;">
+	<a href="/sectors">
+		{% for item in par%}
+		{{item.equipo1}} vs {{item.equipo2}} ( {{item.torneo}})<br>
+		{% endfor %}
+	</a>
+{% endblock %}

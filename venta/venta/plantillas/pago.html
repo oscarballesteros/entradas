@@ -1,0 +1,25 @@
+{% extends 'index1.html' %}
+{% block cuerpo%}
+<span style="color: white;">
+	<center><h3>Formulario de Registro de Reservas</h3></center><br>
+			<form acion="" method="post" enctype='multipart/form-data' class="form-horizontal" style="color: blue;">
+				{% csrf_token %}
+				{% for dato in formu %}
+					{{dato.errors}}
+					<div class"control-group">
+						{{dato.label_tag}}
+						<div class="controls">
+							{{dato}}
+						</div>
+					</div><br>
+				{% endfor %}
+				<br><br>
+				<table align='center' >
+					<tr>
+						<td align='right' width=150px><button type="submit",value="Enviar">Enviar</button></td>
+						<td align='center' width=150px></td>
+						<td align='left' width=150px><button type="reset",value="cancelar">Cancelar</button></td>
+					</tr>
+				</table>
+			</form>
+{% endblock %}

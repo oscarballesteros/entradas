@@ -1,0 +1,48 @@
+<!doctype html>
+<hmtl>
+	<head>
+		<title>Preferencia</title>
+		<script type="application/x-javascript">
+		
+            function simpleCanvas() {
+       		{% if res.estado == 'disponible' %}
+       			var canvas = document.getElementById('polygons');
+        		var contexto = canvas.getContext('2d');
+           			contexto.fillStyle = 'green';
+           			contexto.fillRect (0, 0, 20, 20);
+           {% elif  res.estado == 'reservado'%}
+           		var canvas = document.getElementById('polygons');
+        		var contexto = canvas.getContext('2d');
+           			contexto.fillStyle = 'yellow';
+           			contexto.fillRect (0, 0, 20, 20);
+           	{% else %}
+           	var canvas = document.getElementById('polygons');
+        		var contexto = canvas.getContext('2d');
+           			contexto.fillStyle = 'red';
+           			contexto.fillRect (0, 0, 20, 20);
+           {% endif  %}
+           /*
+            }
+            function res() {
+       		
+           var canvas = document.getElementById('polygons');
+        		var contexto = canvas.getContext('2d');
+           			contexto.fillStyle = 'green';
+           			contexto.fillRect (0, 0, 20, 20);
+  
+            }*/
+}
+
+        </script>
+	</head>
+
+<body background="/static/css/images/preferencia1.jpg"onLoad="simpleCanvas();">
+	
+	<p>Dibujo con  Canvas:</p>
+	<a href="/reservas">
+     <canvas id="polygons" width="20" height="20" Style='position:absolute; top:244px; left:404px;'><font color="black"><h1>1</h1></font>
+  
+     	
+</a>
+</body>
+</html>

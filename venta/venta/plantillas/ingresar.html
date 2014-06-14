@@ -1,0 +1,30 @@
+{% extends 'index1.html' %}
+{% block cuerpo %}
+{% block titulo %}
+
+	<br><center><h1>ingresar al sistema</h1></center>
+{% endblock %}
+{% block encabezado %}
+	<br><center><p>bienbenido al sistema</p></center>
+
+{% endblock %}
+
+
+	<br><br><center><div class="row" >
+		<div class="span10"></div>
+			<div class="span15">
+				<br><form id='formulario' method='post' action=''>
+					{% csrf_token%}
+					<table><center>
+						{{formulario}}
+					</center>
+					</table>
+					<br><br><p><center> <input type='submit' value='ingresar'> </center>
+					 
+				</form>
+			</div>
+		<div class="span3"></div>
+
+	</div>
+	
+{% endblock %}
